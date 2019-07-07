@@ -1,3 +1,8 @@
+# --- Release Information
+
+DEFAULT_GLUON_RELEASE := v2018.2.2-$(shell date '+%Y%m%d')-stable
+GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
+
 # Default priority for updates.
 GLUON_PRIORITY ?= 5
 
@@ -37,8 +42,6 @@ GLUON_FEATURES := \
 
 # Additional packages to install on every image
 GLUON_SITE_PACKAGES := \
-	gluon-web-ffda-domain-director \
-	ffda-domain-director \
 	iptables \
 	iwinfo \
 	haveged \
@@ -118,6 +121,16 @@ TOOLS_PACKAGES := \
 	tcpdump \
 	vnstat
 
+USB_PACKAGES_MR3020 := \
+	kmod-nls-base \
+	kmod-usb-core \
+	kmod-mii \
+	kmod-usb-net \
+	kmod-usb-net-cdc-ether \
+	kmod-usb-net-rndis \
+	kmod-usb-uhci
+
+
 # Group previous package sets
 USB_PACKAGES_WITHOUT_HID := \
 	usbutils \
@@ -171,3 +184,5 @@ endif
 ifeq ($(GLUON_TARGET),sunxi)
 	GLUON_SITE_PACKAGES += $(USB_PACKAGES)
 endif
+
+GLUON_tp-link-tl-mr3020-v1_SITE_PACKAGES := $(USB_PACKAGES_BASIC) $(USB_PACKAGES_MR3020) -gluon-status-page
