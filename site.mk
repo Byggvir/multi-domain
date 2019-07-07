@@ -86,7 +86,7 @@ USB_PACKAGES_STORAGE := \
 	kmod-nls-iso8859-15 \
 	kmod-nls-iso8859-2 \
 	kmod-nls-utf8 \
-swap-utils
+	swap-utils
 
 # USB Network
 USB_PACKAGES_NET := \
