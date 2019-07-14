@@ -25,3 +25,35 @@ To update gluon to the latest `origin/master` use `git submodule update --remote
 
 ## Version schema
 For the versioning of our _stable_ and _testing_ releases we use the Gluon version and add the date of building and release branch.
+
+## Switch between domains from command line
+
+With teh following script you can change the domain from a console with ssh. *(This assumes that you have an authorized ssh-key on the node.)*
+
+```
+#!/bin/bash
+
+echo Switch router to new domain
+echo "Usage: $0 <newdom>\n"
+echo "Default: dom14old\n"
+echo "Use with care!"
+
+if [ -n "$1" ] 
+then
+   DOM=$1
+else
+   DOM='dom14old'
+fi
+
+if [ -n "$2" ] 
+then
+   IP=$2
+else
+   IP=10.152.112.1 # replace with your local node IP
+fi
+
+echo $IP
+
+ssh root@$IP 'uci set gluon.core.domain="'$DOM'" ; gluon-reconfigure; reboot; exit'
+
+```
