@@ -1,10 +1,6 @@
 # --- Release Information
 
-DEFAULT_GLUON_RELEASE := v2019.1.2-$(shell date '+%Y%m%d')-stable
-GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
-
-# Default priority for updates.
-GLUON_PRIORITY ?= 5
+DEFAULT_GLUON_RELEASE := v2020.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.120.1.1RIORITY ?= 5
 
 # Region code required for some images; supported values: us eu
 GLUON_REGION ?= eu
