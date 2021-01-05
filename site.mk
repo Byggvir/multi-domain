@@ -52,9 +52,9 @@ GLUON_FEATURES := \
 GLUON_SITE_PACKAGES := \
 	iptables \
 	iwinfo \
-	haveged \
 	respondd-module-airtime
-
+#	haveged  gelöscht 2020
+	
 #############################
 # Additional package sets
 #############################
