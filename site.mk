@@ -20,8 +20,6 @@ GLUON_WLAN_MESH ?= 11s
 # Build gluon with multidomain support.
 GLUON_MULTIDOMAIN=1
 
-GLUON_DEPRECATED = full
-
 #############################
 # Default packages
 #############################
@@ -46,13 +44,14 @@ GLUON_FEATURES := \
 	web-logging \
 	web-private-wifi \
 	web-wizard \
-	web-admin
+	web-admin \
+	wireless-encryption-wpa3
 
 # Additional packages to install on every image
 GLUON_SITE_PACKAGES := \
 	iptables \
 	iwinfo \
-	respondd-module-airtime
+	respondd-module-airtime \
 #	haveged  gelöscht 2020
 	
 #############################
