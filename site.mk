@@ -1,6 +1,6 @@
 # --- Release Information
 
-DEFAULT_GLUON_RELEASE := v2021.1.1-$(shell date '+%Y%m%d')-stable
+DEFAULT_GLUON_RELEASE := v2022.1.4-$(shell date '+%Y%m%d')-stable
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
 GLUON_DEPRECATED ?= 0
