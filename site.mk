@@ -49,9 +49,9 @@ GLUON_FEATURES := \
 
 # Additional packages to install on every image
 GLUON_SITE_PACKAGES := \
-	iptables \
 	iwinfo \
 	respondd-module-airtime \
+#	iptables gelöscht 2023
 #	haveged  gelöscht 2020
 	
 #############################
